@@ -1,46 +1,9 @@
-# Homework 3 Dynamic Memory Allocator - CSE 320 - Fall 2022
-#### Professor Eugene Stark
-
-### **Due Date: Friday 10/21/2022 @ 11:59pm**
-
-We **HIGHLY** suggest that you read this entire document, the book chapter,
-and examine the base code prior to beginning. If you do not read the entire
-document before beginning, you may find yourself doing extra work.
-
-> :scream: Start early so that you have an adequate amount of time to test
-your program!
-
-> :scream: The functions `malloc`, `free`, `realloc`, `memalign`, `calloc`,
-> etc., are **NOT ALLOWED** in your implementation. If any of these functions,
-> or any other function with similar functionality is found in your program,
-> you **will receive a <font color="red">ZERO</font>**.
+# Dynamic Memory Allocator - CSE 320 - Fall 2022
 
 **NOTE:** In this document, we refer to a word as 2 bytes (16 bits) and a memory
 row as 4 words (64 bits). We consider a page of memory to be 2048 bytes (2 KB)
 
-# Introduction
-
-You must read **Chapter 9.9 Dynamic Memory Allocation Page 839** before
-starting this assignment. This chapter contains all the theoretical
-information needed to complete this assignment. Since the textbook has
-sufficient information about the different design strategies and
-implementation details of an allocator, this document will not cover this
-information. Instead, it will refer you to the necessary sections and pages in
-the textbook.
-
-## Takeaways
-
-After completing this assignment, you will have a better understanding of:
-* The inner workings of a dynamic memory allocator
-* Memory padding and alignment
-* Structs and linked lists in C
-* [errno](https://linux.die.net/man/3/errno) numbers in C
-* Unit testing in C
-
 # Overview
-
-You will create an allocator for the x86-64 architecture with the following features:
-
 - Free lists segregated by size class, using first-fit policy within each size class.
 - Immediate coalescing of large blocks on free with adjacent free blocks.
 - Boundary tags to support efficient coalescing.
@@ -927,22 +890,3 @@ comment:</font>**
 > documentation located [here](http://criterion.readthedocs.io/en/master/)! This
 > documentation is VERY GOOD.
 
-# Hand-in instructions
-Make sure your directory tree looks like it did originally after merging the basecode,
-and and that your homework compiles.
-
-This homework's tag is: `hw3`
-
-<pre>
-$ git submit hw3
-</pre>
-
-# A Word to the Wise
-
-This program will be very difficult to get working unless you are
-extremely disciplined about your coding style.  Think carefully about how
-to modularize your code in a way that makes it easier to understand and
-avoid mistakes.  Verbose, repetitive code is error-prone and **evil!**
-When writing your program try to comment as much as possible.
-Format the code consistently.  It is much easier for your TA and the
-professor to help you if we can quickly figure out what your code does.
